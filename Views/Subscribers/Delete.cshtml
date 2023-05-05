@@ -1,0 +1,27 @@
+﻿@model PhoneBook.Models.Subscriber
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<form asp-action="DeletePost" method="post">
+    <input asp-for="@Model.Id" hidden />
+
+    <div class="form-group mb-2">
+        <label asp-for="@Model.FirstName"></label>
+        <input asp-for="@Model.FirstName" type="text" class="form-control" disabled>
+    </div>
+    <div class="form-group mb-2">
+        <label asp-for="@Model.LastName">Last Name</label>
+        <input asp-for="@Model.LastName" type="text" class="form-control" disabled>
+    </div>
+    <div class="form-group mb-2">
+        <label asp-for="@Model.PhoneNumber"></label>
+        <input asp-for="@Model.PhoneNumber" type="text" class="form-control" disabled>
+    </div>
+    <div class="form-group mt-2 text-center">
+        <input type="submit" class="btn btn-primary" value="Delete" />
+    </div>
+
+</form>
